@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../angular.js"></script>
+	</head>
+	<body>
+
+	<div data-ng-app="" data-ng-init="names=[
+	{name:'one',age:'12'},
+	{name:'two',age:'18'},
+	{name:'three',age:'20'}
+	]">
+		<p>循环对象</p>
+		<ul>
+			<li data-ng-repeat="x in names">{{ x.name + ', ' + x.age }}</li>
+		</ul>
+	</div>
+	</body>
+</html>

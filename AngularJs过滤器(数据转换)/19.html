@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../angular.js"></script>
+	</head>
+	<body>
+		<!-- 过滤器可以使用一个管道字符（|）添加到表达式和指令中 -->
+		<!-- currency	格式化数字为货币格式。
+		filter	从数组项中选择一个子集。
+		lowercase	格式化字符串为小写。
+		orderBy	根据某个表达式排列数组。
+		uppercase	格式化字符串为大写。 -->
+		<div ng-app="myApp" ng-controller="personCtrl">
+			<p>姓名为 {{ lastName | uppercase }}</p>
+			<p>姓名为 {{ lastName | lowercase }}</p>
+		</div>
+
+		<script type="text/javascript" src="19.js"></script>
+	</body>
+</html>

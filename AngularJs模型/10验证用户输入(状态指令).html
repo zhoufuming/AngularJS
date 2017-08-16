@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../angular.js"></script>
+	</head>
+	<body>
+		<!-- ng-model 指令可以为应用数据提供状态值invalid(无效的), dirty(发生改变), touched(通过触屏点击的), error(错误的) -->
+		<form ng-app="" name="myForm">
+			Email:
+			<input type="email" name="myAddress" ng-model="text">
+			<h1>状态</h1>
+			<p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+			<p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+			<p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+			<p>Error: {{myForm.myAddress.$error.email}} (如果输入的值是不合法的则为 true/合法是不返回值)。</p>
+		</form>
+
+		<p>在输入框中输入你的邮箱地址，如果不是一个合法的邮箱地址，会弹出提示信息。</p>
+	</body>
+</html>

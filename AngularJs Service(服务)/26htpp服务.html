@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../angular.js"></script>
+	</head>
+	<body>
+		<!-- $http 是 AngularJS 应用中最常用的服务。 服务向服务器发送请求，应用响应服务器传送过来的数据。 -->
+		<div ng-app="myApp" ng-controller="myCtrl"> 
+			<p>欢迎信息:</p>
+			<h1>{{myWelcome}}</h1>
+		</div>
+
+		<p> $http 服务向服务器请求信息，返回的值放入变量 "myWelcome" 中。(但本地无法返回信息)</p>
+
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope, $http) {
+			  $http.get("welcome.htm").then(function (response) {
+			      $scope.myWelcome = response.data;
+			  });
+			});
+		</script>
+
+	</body>
+</html>
